@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
-
+import 'HomePage.dart';
 void main() {
-  runApp(const MaterialApp(
-    home: Scaffold(
-      body: Center(
-        child: Text('Hello, World!'),
-      ),
-    ),
-  ));
+  runApp(const MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Flutter + Node.js",
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const HomePage(),
+    );
+  }
+}
